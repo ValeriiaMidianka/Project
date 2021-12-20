@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addressbook.ControllerVideo">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="800.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </VBox.margin>
+      </MediaView>
+      <HBox prefHeight="159.0" prefWidth="780.0">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#playAction" prefHeight="40.0" prefWidth="120.0" text="Play">
+               <HBox.margin>
+                  <Insets bottom="50.0" left="10.0" right="50.0" top="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="CentSchbkCyrill BT Bold" size="14.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#contextExit" text="Exit" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#pauseAction" prefHeight="40.0" prefWidth="120.0" text="Pause">
+               <HBox.margin>
+                  <Insets bottom="50.0" left="20.0" right="50.0" top="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="CentSchbkCyrill BT Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#resetAction" prefHeight="40.0" prefWidth="120.0" text="Reset">
+               <HBox.margin>
+                  <Insets bottom="50.0" left="20.0" right="50.0" top="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="CentSchbkCyrill BT Bold" size="14.0" />
+               </font>
+            </Button>
+            <Slider fx:id="volumeSlider" prefHeight="14.0" prefWidth="156.0" value="30.0">
+               <HBox.margin>
+                  <Insets top="60.0" />
+               </HBox.margin>
+            </Slider>
+            <Label fx:id="labelSlider" prefHeight="20.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets top="80.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>
